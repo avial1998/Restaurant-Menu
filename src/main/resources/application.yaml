@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: Menu
+server:
+    port: 9091
