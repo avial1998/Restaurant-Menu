@@ -1,7 +1,10 @@
 FROM openjdk:17 AS build
 WORKDIR /app
-COPY ..
-RUN mvn clean package -DskipTests
+COPY pom.xml .
+RUN mvn  -B dependency:go-offline
+
+COPY src ./src
+RUN mvn -B clean package
 FROM openjdk:17
 WORKDIR /app
 COPY --from=build /app/target/restaurant-menu.jar restaurant-menu.jar
