@@ -4,7 +4,7 @@ COPY pom.xml .
 COPY src ./src
 RUN mvn --version
 RUN mvn  clean package
-# Stage 2
+# Stage 
 FROM amazoncorretto:17
 WORKDIR /app
 COPY --from=build /app/target/restaurant-menu.jar restaurant-menu.jar
