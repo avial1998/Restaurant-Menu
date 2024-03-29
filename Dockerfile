@@ -5,7 +5,7 @@ COPY src ./src
 RUN mvn --version
 RUN mvn  clean package
 # Stage 2
-FROM openjdk:17
+FROM amazoncorretto:17
 WORKDIR /app
 COPY --from=build /app/target/restaurant-menu.jar restaurant-menu.jar
 EXPOSE 9091
