@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: restaurant-menu
+spec:
+  selector:
+    matchLabels:
+      app: restaurant-menu
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: restaurant-menu
+    spec:
+      containers:
+          - name: restaurant-menu
+            image: avial1998/restaurant-menu:latest
+            imagePullPolicy: IfNotPresent
+            ports:
+              - containerPort: 8080
