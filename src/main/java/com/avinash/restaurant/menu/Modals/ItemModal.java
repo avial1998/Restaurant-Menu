@@ -3,7 +3,6 @@ package com.avinash.restaurant.menu.Modals;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.RestController;
 
 @Getter
 @Setter

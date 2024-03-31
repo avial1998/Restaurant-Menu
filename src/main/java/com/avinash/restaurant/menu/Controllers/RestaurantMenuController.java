@@ -1,6 +1,5 @@
 package com.avinash.restaurant.menu.Controllers;
 
-import com.avinash.restaurant.menu.Entity.Item;
 import com.avinash.restaurant.menu.Mapper.ItemMapper;
 import com.avinash.restaurant.menu.Modals.ItemModal;
 import com.avinash.restaurant.menu.Services.RestaurantMenuService;

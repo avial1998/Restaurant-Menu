@@ -2,8 +2,6 @@ package com.avinash.restaurant.menu.Services;
 
 import com.avinash.restaurant.menu.Dao.RestaurantMenuDao;
 import com.avinash.restaurant.menu.Entity.Item;
-import com.avinash.restaurant.menu.Modals.ItemModal;
-import com.avinash.restaurant.menu.Utils.MenuCategory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
