@@ -1,19 +1,20 @@
 package com.avinash.restaurant.menu.Services;
 
+import com.avinash.restaurant.menu.Dao.RestaurantMenuDao;
+import com.avinash.restaurant.menu.Entity.Item;
 import com.avinash.restaurant.menu.Modals.ItemModal;
 import com.avinash.restaurant.menu.Utils.MenuCategory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class RestaurantMenuService {
-    public ItemModal listItems(){
-        System.out.println("Listing items");
-        ItemModal itemModal = new ItemModal();
-        itemModal.setItemName("Margarite Pizza");
-        itemModal.setItemPrice(100);
-        itemModal.setItemCategory(MenuCategory.VEGETARIAN.name());
-        itemModal.setItemDescription("Margarite Pizza is a cheese based pizza");
-        itemModal.setItemGroup("Pizza");
-        return itemModal;
+    @Autowired
+    private RestaurantMenuDao restaurantMenuDao;
+    public List<Item> listItems(){
+
+        return restaurantMenuDao.findAll();
     }
 }

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Setter
 @Component
 public class ItemModal {
+    private String id;
     private String itemName;
     private int itemPrice;
     private String itemCategory;
